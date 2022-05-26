@@ -8,7 +8,7 @@ botonaso.addEventListener("click", () => {
       location.href = "../ejerciciosProg/multiplos.html";
       break;
 
-    default
+    default:
       alert("Nunca deberia llegarse a este cartel");
   }
 });

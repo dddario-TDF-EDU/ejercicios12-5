@@ -7,8 +7,11 @@ function esMultiplo(numA: number, numB: number): boolean {
 
 function verificacionNumero(nota): boolean {
   let numValido: boolean;
-  if (nota == null || nota == "") numValido = false;
-  else numValido = true;
+  if (nota == null || nota === "") {
+    numValido = false;
+  } else {
+    numValido = true;
+  }
   return numValido;
 }
 
@@ -20,14 +23,19 @@ function verificacionMultiplos() {
   A = Number(prompt("ingrese el primer numero"));
   numValido = verificacionNumero(A);
 
-  if (numValido == false) alert("numero ingresado invalido");
-  else {
+  if (numValido === false) {
+    alert("numero ingresado invalido");
+  } else {
     B = Number(prompt("ingrese el segundo numero"));
     numValido = verificacionNumero(B);
-    if (numValido == false) alert("numero ingresado invalido");
-    else {
-      if (esMultiplo(A, B) == true) alert("Son multiplos");
-      else alert("No son multiplos");
+    if (numValido === false) {
+      alert("numero ingresado invalido");
+    } else {
+      if (esMultiplo(A, B) === true) {
+        alert("Son multiplos");
+      } else {
+        alert("No son multiplos");
+      }
     }
   }
 }
